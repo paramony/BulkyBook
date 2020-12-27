@@ -12,10 +12,10 @@ namespace BulkyBook.DataAccess.Repository
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
-            categoryRepository = new CategoryRepository(_db);
+            Category = new CategoryRepository(_db);
             SP_Call = new SP_Call(_db);
         }
-        public ICategoryRepository categoryRepository { get; private set; }
+        public ICategoryRepository Category { get; private set; }
 
         public ISP_Call SP_Call { get; private set; }
 
